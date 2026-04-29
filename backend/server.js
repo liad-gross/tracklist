@@ -5,7 +5,9 @@ require('dotenv').config()
 
 const app = express()
 
-app.use(cors())
+app.use(cors({
+  origin: ['https://liad-gross.github.io', 'http://localhost:5173']
+}))
 app.use(express.json())
 
 // Routes
